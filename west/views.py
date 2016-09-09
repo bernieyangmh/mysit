@@ -1,8 +1,9 @@
 
 # -*- coding: utf-8 -*-
 # Create your views here.
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth import *
 
 from django.http import HttpResponse
 from west.models import Character
@@ -28,3 +29,5 @@ def investigate(request):
     if request.POST:
         ctx['rlt'] = request.POST['staff']
     return render(request, "investigate.html", ctx)
+
+

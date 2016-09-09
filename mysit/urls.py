@@ -8,5 +8,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^west/', include('west.urls')),
+    url(r'^users/', include('users.urls')),
+
 
 ]
